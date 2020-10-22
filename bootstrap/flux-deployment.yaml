@@ -146,7 +146,7 @@ spec:
             - --git-branch=master
             # Include this if you want to restrict the manifests considered by flux
             # to those under the following relative paths in the git repository
-            - --git-path=bootstrap,components
+            - --git-path=bootstrap,components,apps
             - --git-label=flux-sync
             - --git-user=Flux automation
             - --git-email=flux@example.com
