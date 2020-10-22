@@ -17,4 +17,3 @@ spec:
     identity:
       issuer:
         crtExpiry: 2021-10-17T07:24:27Z
-    global:
