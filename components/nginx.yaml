@@ -1,0 +1,23 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: nginx
+  namespace: infrastructure
+spec:
+  releaseName: nginx
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com
+    name: nginx-ingress
+    version: 1.41.2
+  values:
+    controller:
+      podAnnotations:
+        linkerd.io/inject: disabled
+      service:
+        externalTrafficPolicy: Local
+      metrics:
+        enabled: true
+        service:
+          annotations:
+            prometheus.io/port: 10254
+            prometheus.io/scrape: true
