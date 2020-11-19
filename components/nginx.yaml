@@ -6,7 +6,7 @@ metadata:
 spec:
   releaseName: nginx
   chart:
-    repository: https://kubernetes-charts.storage.googleapis.com
+    repository: https://charts.helm.sh/stable
     name: nginx-ingress
     version: 1.41.2
   values:
